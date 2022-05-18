@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulir Pendaftaran</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <div class="container">
+      <h2 class="alert alert-danger text-center mt-3">FORMULIR PESERTA DIDIK BARU SMPN 1 MOJOKERTO</h2>
+      <form action="koneksiform.php" method="post">
+
+        <div id="list-example" class="list-group">
+          <a class="list-group-item list-group-item-danger list-group-item-action" href="#list-item-1">REGISTRASI</a>
+          <a class="list-group-item list-group-item-danger list-group-item-action" href="#list-item-2">DATA PRIBADI</a>
+          <a class="list-group-item list-group-item-danger list-group-item-action" href="#list-item-3">DATA AYAH</a>
+          <a class="list-group-item list-group-item-danger list-group-item-action" href="#list-item-4">DATA IBU</a>
+        </div>
+        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+
+          <!--REGISTRASI-->
+          <h4 id="list-item-1"></h4>
+          <p>
+        <!--membuat inputan tanggal lahir dengan menggunakn tipe "date"-->
+        <div class="form-group row mb-3">
+          <label for="tanggal_pendaftaran" class="col-sm-2 col-form-label">Tanggal Pendaftaran</label>
+          <div class="col-sm-10">
+          <input type="date" name="tanggal_pendaftaran" class="form-control">
+        </div>
+        </div>
+
+        <span class="placeholder col-12 text-bg-danger mb-3">//  REGISTRASI PESERTA DIDIK</span>
+
+        <div class="form-group row mb-2">
+          <label for="jenis_pendaftaran" class="col-sm-2 col-form-label">Jenis Pendaftaran</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="jenis_pendaftaran" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="option1">Siswa Baru</option>
+            <option value="option2">Pindahan</option>
+          </select>
+          </div>
+        </div>
+        </div>
+
+        <!--membuat inputan NISN-->
+        <div class="form-group row mb-3">
+          <label for="nis" class="col-sm-2 col-form-label">NIS</label>
+          <div class="col-sm-10">
+          <input type="text" name="nis" class="form-control" placeholder="NIS (Nomor Induk Siswa)">
+        </div>
+        </div>
+
+        <!--membuat inputan NIK-->
+        <div class="form-group row mb-3">
+          <label for="nomor_peserta" class="col-sm-2 col-form-label">Nomor Peserta Ujian</label>
+          <div class="col-sm-10">
+          <input type="text" name="nomor_peserta" class="form-control" placeholder="Masukkan Nomor Peserta Ujian">
+        </div>
+        </div>
+
+        <!--membuat inputan jenis kelamin dengan radio button-->
+        <div class="form-group row mb-3">
+          <label for="paud" class="col-sm-2 col-form-label">Apakah Pernah Paud</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="paud" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+          </select>
+        </div>
+        </div>
+
+        <!--membuat inputan jenis kelamin dengan radio button-->
+        <div class="form-group row mb-3">
+          <label for="tk" class="col-sm-2 col-form-label">Apakah Pernah TK</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="tk" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="ya">Ya</option>
+            <option value="tidak">Tidak</option>
+          </select>
+        </div>
+        </div>
+
+        <!--membuat inputan NISN-->
+        <div class="form-group row mb-3">
+          <label for="skhun" class="col-sm-2 col-form-label">No Seri SKHUN</label>
+          <div class="col-sm-10">
+          <input type="text" name="skhun" class="form-control" placeholder="No Seri SKHUN Sebelumnya">
+        </div>
+        </div>
+
+        <!--membuat inputan NIK-->
+        <div class="form-group row mb-3">
+          <label for="ijazah" class="col-sm-2 col-form-label">No Seri Ijazah</label>
+          <div class="col-sm-10">
+          <input type="text" name="ijazah" class="form-control" placeholder="No Seri Ijazah Sebelumnya">
+        </div>
+        </div>
+
+        <!--membuat inputan kebutuhan khusus dengan cara select-->
+        <div class="form-group row mb-3">
+          <label for="hobi" class="col-sm-2 col-form-label">Hobi</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="hobi" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="1">Olah Raga</option>
+            <option value="2">Kesenian</option>
+            <option value="3">Membaca</option>
+            <option value="4">Menulis</option>
+            <option value="5">Traveling</option>
+            <option value="6">Lainnya</option>
+          </select>
+          </div>
+        </div>
+
+        <!--membuat inputan agama dengan cara select-->
+         <div class="form-group row mb-3">
+          <label for="citacita" class="col-sm-2 col-form-label">Cita-cita</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="citacita" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="1">PNS</option>
+            <option value="2">TNI/POLRI</option>
+            <option value="3">Guru/Dosen</option>
+            <option value="4">Dokter</option>
+            <option value="5">Politikus</option>
+            <option value="6">Wiraswasta</option>
+            <option value="7">Seni/Lukis/Artis/Sejenisnya</option>
+            <option value="8">Lainnya</option>
+          </select>
+          </div>
+        </div>
+
+      <!--DATA PRIBADI-->
+      </p>
+      <h4 id="list-item-2"></h4>
+      <p> 
+        <span class="placeholder col-12 text-bg-danger mb-3">//  DATA PRIBADI</span>
+
+        <!--membuat inputan nama-->
+        <div class="form-group row mb-3">
+          <label for="nama" class="col-sm-2 col-form-label">Nama Lengkap</label>
+          <div class="col-sm-10">
+          <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Lengkap Anda">
+        </div>
+        </div>
+
+        <!--membuat inputan jenis kelamin dengan radio button-->
+        <div class="form-group row mb-3">
+          <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="jenis_kelamin" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="pr">Perempuan</option>
+            <option value="lk">Laki-laki</option>
+          </select>
+        </div>
+        </div>
+
+        <!--membuat inputan NISN-->
+        <div class="form-group row mb-3">
+          <label for="nisn" class="col-sm-2 col-form-label">NISN</label>
+          <div class="col-sm-10">
+          <input type="text" name="nisn" class="form-control" placeholder="NISN (Nomor Induk Siswa Nasional)">
+        </div>
+        </div>
+
+        <!--membuat inputan NIK-->
+        <div class="form-group row mb-3">
+          <label for="nik" class="col-sm-2 col-form-label">NIK</label>
+          <div class="col-sm-10">
+          <input type="text" name="nik" class="form-control" placeholder="NIK (Nomor Induk Keluarga)">
+        </div>
+        </div>
+
+        <!--membuat inputan tempat lahir-->
+        <div class="form-group row mb-3">
+          <label for="tempat_lahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
+          <div class="col-sm-10">
+          <input type="text" name="tempat_lahir" class="form-control" placeholder="Masukkan Tempat Anda Lahir">
+        </div>
+        </div>
+
+        <!--membuat inputan tanggal lahir dengan menggunakn tipe "date"-->
+        <div class="form-group row mb-3">
+          <label for="tanggal_lahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+          <div class="col-sm-10">
+          <input type="date" name="tanggal_lahir" class="form-control">
+        </div>
+        </div>
+
+        <!--membuat inputan agama dengan cara select-->
+         <div class="form-group row mb-3">
+          <label for="agama" class="col-sm-2 col-form-label">Agama</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="agama" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="1">Islam</option>
+            <option value="2">Kristen/Protestan</option>
+            <option value="3">Budha</option>
+            <option value="4">Hindu</option>
+            <option value="5">Khong Hu Cu</option>
+            <option value="6">Lainnya</option>
+          </select>
+          </div>
+        </div>
+
+        <!--membuat inputan kebutuhan khusus dengan cara select-->
+        <div class="form-group row mb-3">
+          <label for="kebutuhan_khusus" class="col-sm-2 col-form-label">Berkebutuhan Khusus</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="kebutuhan_khusus" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="1">Tidak Ada</option>
+            <option value="2">Netra</option>
+            <option value="3">Rungu</option>
+            <option value="4">Wicara</option>
+            <option value="5">Tuna Ganda</option>
+            <option value="6">Autis</option>
+            <option value="7">Down Syndrome</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="alamat_jalan" class="col-sm-2 col-form-label">Alamat Jalan</label>
+          <div class="col-sm-10">
+          <input type="text" name="alamat_jalan" class="form-control" placeholder="Masukkan Alamat Jalan Lengkap Anda">
+        </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="rt" class="col-sm-2 col-form-label">RT</label>
+          <div class="col-sm-10">
+          <input type="text" name="rt" class="form-control" placeholder="Masukkan Nomor RT ">
+        </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="rw" class="col-sm-2 col-form-label">RW</label>
+          <div class="col-sm-10">
+          <input type="text" name="rw" class="form-control" placeholder="Masukkan Nomor RW">
+        </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="nama_dusun" class="col-sm-2 col-form-label">Nama Dusun</label>
+          <div class="col-sm-10">
+          <input type="text" name="nama_dusun" class="form-control" placeholder="Masukkan Nama Dusun">
+        </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="nama_desa" class="col-sm-2 col-form-label">Nama Kelurahan/Desa</label>
+          <div class="col-sm-10">
+          <input type="text" name="nama_desa" class="form-control" placeholder="Masukkan Nama Kelurahan/Desa">
+        </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="nama_kecamatan" class="col-sm-2 col-form-label">Nama Kecamatan</label>
+          <div class="col-sm-10">
+          <input type="text" name="nama_kecamatan" class="form-control" placeholder="Masukkan Nama Kecamatan">
+        </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="kode_pos" class="col-sm-2 col-form-label">Kode Pos</label>
+          <div class="col-sm-10">
+          <input type="text" name="kode_pos" class="form-control" placeholder="Masukkan Nomor Kode Pos">
+        </div>
+        </div>
+
+        <!--membuat inputan nomer telepon-->
+        <div class="form-group row mb-3">
+          <label for="telp" class="col-sm-2 col-form-label">No. Telepon</label>
+           <div class="col-sm-10">
+          <input type="tel" name="telp" class="form-control" placeholder="Masukkan Nomor Telepon Anda">
+        </div>
+        </div>
+
+        <!--membuat inputan email-->
+        <div class="form-group row mb-3">
+            <label for="email" class="col-sm-2 col-form-label">Email Pribadi</label>
+            <div class="col-sm-10">
+              <input type="email" name="email" class="form-control" placeholder="Masukkan Email Anda">
+            </div>
+          </div>
+
+        <!--membuat inputan kewarganegaraan-->
+        <div class="form-group row mb-3">
+          <label for="negara" class="col-sm-2 col-form-label">Kewarganegaraan</label>
+          <div class="col-sm-10">
+          <input type="text" name="negara" class="form-control" placeholder="Masukkan Kewarganegaraan Anda">
+        </div>
+        </div>
+  </p>
+  <h4 id="list-item-3"></h4>
+  <p>
+     <span class="placeholder col-12 text-bg-danger mb-3">//  DATA AYAH KANDUNG</span>
+
+        <!--untuk membuat inputan nama ayah-->
+        <div class="form-group row mb-3">
+          <label for="nama_ayah" class="col-sm-2 col-form-label">Nama Ayah Kandung</label>
+          <div class="col-sm-10">
+          <input type="text" name="nama_ayah" class="form-control" placeholder="Masukkan Nama Ayah">
+        </div>
+        </div>
+
+        <!--membuat inputan tahun kelahiran-->
+        <div class="form-group row mb-3">
+          <label for="tahun_lahir" class="col-sm-2 col-form-label">Tahun Lahir</label>
+          <div class="col-sm-10">
+          <input type="text" name="tahun_lahir_ayah" class="form-control" placeholder="Masukkan Tahun Lahir Anda">
+        </div>
+        </div>
+
+        <!--membuat inputan pendidikan yang telah dijalani menggunakan select-->
+        <div class="form-group row mb-3">
+          <label for="pendidikan_ayah" class="col-sm-2 col-form-label">Pendidikan</label>
+          <div class="col-sm-10">
+            <select class="form-select" name="pendidikan_ayah" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="p1">Tidak Sekolah</option>
+            <option value="p2">Putus SD</option>
+            <option value="p3">SD Sederajat</option>
+            <option value="p4">SMP Sederajat</option>
+            <option value="p5">SMA Sederajat</option>
+            <option value="p6">D1</option>
+            <option value="p7">D2</option>
+            <option value="p8">D3</option>
+            <option value="p9">D4/S1</option>
+            <option value="p10">S2</option>
+            <option value="p11">S3</option>
+          </select>
+          </div>
+        </div>
+
+        <!--membuat inputan pekerjaan ayah-->
+        <div class="form-group row mb-3">
+          <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
+          <div class="col-sm-10">
+          <input type="text" name="pekerjaan_ayah" class="form-control" placeholder="Masukkan Pekerjaan Ayah ">
+        </div>
+        </div>
+
+        <!--membuat inputan penghasilan bulanan ayah-->
+        <div class="form-group row mb-3">
+          <label for="penghasilan" class="col-sm-2 col-form-label">Penghasilan Bulanan</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="penghasilan_ayah" aria-label="Default select example">
+          <option value="">Pilih</option>
+          <option value="1">Kurang dari 500.000</option>
+          <option value="2">500.000-999.999</option>
+          <option value="3">1 juta-1.999.999</option>
+          <option value="4">2 juta-4.999.999</option>
+          <option value="5">5 juta-20 juta</option>
+          <option value="6">lebih dari 20 juta</option>
+          </select>
+        </div>
+        </div>
+
+        <!--membuat inputan kebutuhan khusus dengan cara select-->
+        <div class="form-group row mb-3">
+          <label for="kebutuhan_ayah" class="col-sm-2 col-form-label">Berkebutuhan Khusus</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="kebutuhan_ayah" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="1">Tidak Ada</option>
+            <option value="2">Netra</option>
+            <option value="3">Rungu</option>
+            <option value="4">Wicara</option>
+            <option value="5">Tuna Ganda</option>
+            <option value="6">Autis</option>
+            <option value="7">Down Syndrome</option>
+          </select>
+        </div>
+        </div>
+  </p>
+  <h4 id="list-item-4"></h4>
+  <p>
+    <span class="placeholder col-12 text-bg-danger mb-3">//  DATA IBU KANDUNG</span>
+
+        <!--untuk membuat inputan nama ibu-->
+        <div class="form-group row mb-3">
+          <label for="nama_ibu" class="col-sm-2 col-form-label">Nama Ibu Kandung</label>
+          <div class="col-sm-10">
+          <input type="text" name="nama_ibu" class="form-control" placeholder="Masukkan Nama Ibu ">
+        </div>
+        </div>
+
+        <!--membuat inputan tahun kelahiran-->
+        <div class="form-group row mb-3">
+          <label for="tahun_lahir_ibu" class="col-sm-2 col-form-label">Tahun Lahir</label>
+          <div class="col-sm-10">
+          <input type="text" name="tahun_lahir_ibu" class="form-control" placeholder="Masukkan Tahun Lahir">
+        </div>
+        </div>
+
+        <!--membuat inputan pendidikan yang telah dijalani menggunakan select-->
+        <div class="form-group row mb-3">
+          <label for="pendidikan_ibu" class="col-sm-2 col-form-label">Pendidikan</label>
+          <div class="col-sm-10">
+            <select class="form-select" name="pendidikan_ibu" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="p1">Tidak Sekolah</option>
+            <option value="p2">Putus SD</option>
+            <option value="p3">SD Sederajat</option>
+            <option value="p4">SMP Sederajat</option>
+            <option value="p5">SMA Sederajat</option>
+            <option value="p6">D1</option>
+            <option value="p7">D2</option>
+            <option value="p8">D3</option>
+            <option value="p9">D4/S1</option>
+            <option value="p10">S2</option>
+            <option value="p11">S3</option>
+          </select>
+          </div>
+        </div>
+
+        <!--membuat inputan pekerjaan ibu-->
+        <div class="form-group row mb-3">
+          <label for="pekerjaan_ibu" class="col-sm-2 col-form-label">Pekerjaan</label>
+          <div class="col-sm-10">
+          <input type="text" name="pekerjaan_ibu" class="form-control" placeholder="Masukkan Pekerjaan Ibu ">
+        </div>
+        </div>
+
+        <!--membuat inputan penghasilan bulanan ibu-->
+        <div class="form-group row mb-3">
+          <label for="penghasilan_ibu" class="col-sm-2 col-form-label">Penghasilan Bulanan</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="penghasilan_ibu" aria-label="Default select example">
+          <option value="">Pilih</option>
+          <option value="1">Kurang dari 500.000</option>
+          <option value="2">500.000-999.999</option>
+          <option value="3">1 juta-1.999.999</option>
+          <option value="4">2 juta-4.999.999</option>
+          <option value="5">5 juta-20 juta</option>
+          <option value="6">lebih dari 20 juta</option>
+          </select>
+        </div>
+        </div>
+
+        <!--membuat inputan kebutuhan khusus dengan cara select-->
+        <div class="form-group row mb-3">
+          <label for="kebutuhan_ibu" class="col-sm-2 col-form-label">Berkebutuhan Khusus</label>
+          <div class="col-sm-10">
+          <select class="form-select" name="kebutuhan_ibu" aria-label="Default select example">
+            <option selected>Pilih Salah Satu</option>
+            <option value="1">Tidak Ada</option>
+            <option value="2">Netra</option>
+            <option value="3">Rungu</option>
+            <option value="4">Wicara</option>
+            <option value="5">Tuna Ganda</option>
+            <option value="6">Autis</option>
+            <option value="7">Down Syndrome</option>
+          </select>
+        </div>
+        </div>
+        <!--membuat button next yang langsung terhubung dengan halaman/form lain-->
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-secondary btn">Simpan</button>
+        </div>
+      </p>
+    </div>
+      </form>
+    </div>
+  </body>
+</html>
